@@ -10,6 +10,8 @@ import "./style/home.scss";
 import "./style/founder.scss";
 import "./style/menu.scss";
 import "./style/footer.scss";
+import "./style/contact.scss";
+import Contact from "./components/contact/Contact";
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>
