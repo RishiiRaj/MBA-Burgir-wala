@@ -3,14 +3,12 @@ import { Link } from "react-router-dom";
 import { IoFastFoodOutline } from "react-icons/io5";
 import { FiShoppingCart, FiLogIn } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 
-const Header = ({isAuthenticated = false}) => {
+const Header = ({ isAuthenticated = false }) => {
   return (
     <nav>
-      <motion.div
-      initial={{x:"-100%"}}
-      whileInView = {{x:"0"}}>
+      <motion.div initial={{ x: "-100%" }} whileInView={{ x: "0" }}>
         <IoFastFoodOutline />
       </motion.div>
       <div>
@@ -20,8 +18,9 @@ const Header = ({isAuthenticated = false}) => {
         <Link to="/cart">
           <FiShoppingCart />
         </Link>
-        <Link to={isAuthenticated?"/":"/login"}>
-          {isAuthenticated ? <FaUser/> : <FiLogIn/>}
+        {/* if authenticated then go to profile, else to login */}
+        <Link to={isAuthenticated ? "/me" : "/login"}>
+          {isAuthenticated ? <FaUser /> : <FiLogIn />}
         </Link>
       </div>
     </nav>
