@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AiFillEye } from "react-icons/ai";
 
 const MyOrders = () => {
+  const arr = [1, 2, 3, 4];
   return (
     <section className="tableClass">
       <main>
@@ -11,7 +12,7 @@ const MyOrders = () => {
             <tr>
               <th>Order Id</th>
               <th>Status</th>
-              <th>Item QUantity</th>
+              <th>Item Quantity</th>
               <th>Amount</th>
               <th>Payment Method</th>
               <th>Action</th>
@@ -19,18 +20,20 @@ const MyOrders = () => {
           </thead>
 
           <tbody>
-            <tr>
-              <td>#dbibf</td>
-              <td>Processing</td>
-              <td>5</td>
-              <td>Rs 500</td>
-              <td>UPI</td>
-              <td>
-                <Link to={`/orders/${"asdb"}`}>
-                  <AiFillEye />
-                </Link>
-              </td>
-            </tr>
+            {arr.map((i) => (
+              <tr>
+                <td>#dbibf</td>
+                <td>Processing</td>
+                <td>5</td>
+                <td>Rs 500</td>
+                <td>UPI</td>
+                <td>
+                  <Link to={`/orders/${"asdb"}`}>
+                    <AiFillEye />
+                  </Link>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </main>
