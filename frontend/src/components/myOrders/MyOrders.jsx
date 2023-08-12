@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AiFillEye } from "react-icons/ai";
+import { AiOutlineEye } from "react-icons/ai";
 
 const MyOrders = () => {
   const arr = [1, 2, 3, 4];
+
   return (
     <section className="tableClass">
       <main>
@@ -12,7 +13,7 @@ const MyOrders = () => {
             <tr>
               <th>Order Id</th>
               <th>Status</th>
-              <th>Item Quantity</th>
+              <th>Item Qty</th>
               <th>Amount</th>
               <th>Payment Method</th>
               <th>Action</th>
@@ -21,15 +22,15 @@ const MyOrders = () => {
 
           <tbody>
             {arr.map((i) => (
-              <tr>
-                <td>#dbibf</td>
+              <tr key={i}>
+                <td>#sdkfsdfdsf</td>
                 <td>Processing</td>
-                <td>5</td>
-                <td>Rs 500</td>
-                <td>UPI</td>
+                <td>23</td>
+                <td>₹{21312}</td>
+                <td>COD</td>
                 <td>
-                  <Link to={`/orders/${"asdb"}`}>
-                    <AiFillEye />
+                  <Link to={`/order/${"asdsds"}`}>
+                    <AiOutlineEye />
                   </Link>
                 </td>
               </tr>
